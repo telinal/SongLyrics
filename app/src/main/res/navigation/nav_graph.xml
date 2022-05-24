@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeSearch">
+
+    <fragment
+        android:id="@+id/homeSearch"
+        android:name="com.example.songlyrics.fragments.HomeSearch"
+        android:label="HomeSearch" >
+        <action
+            android:id="@+id/action_homeSearch_to_displayLyrics"
+            app:destination="@id/displayLyrics" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayLyrics"
+        android:name="com.example.songlyrics.fragments.DisplayLyrics"
+        android:label="DisplayLyrics" >
+        <argument
+            android:name="lyricsURL"
+            app:argType="string" />
+    </fragment>
+</navigation>
